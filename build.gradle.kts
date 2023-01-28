@@ -11,8 +11,11 @@ repositories {
 }
 
 dependencies {
-    implementation("org.json:json:20220924")
-    implementation("com.fasterxml.jackson.core:jackson-databind:2.12.7.1")
+    implementation(platform("com.fasterxml.jackson:jackson-bom:2.14.1"))
+    implementation("com.fasterxml.jackson.core:jackson-databind")
+    implementation("com.fasterxml.jackson.datatype:jackson-datatype-jdk8")
+    implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     testImplementation(kotlin("test"))
 }
 
