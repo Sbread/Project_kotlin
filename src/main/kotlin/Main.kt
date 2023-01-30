@@ -28,5 +28,6 @@ fun main() {
             item { "third" }
         }
     }
+    bbc.writeToFile("output.txt")
     println(bbc)
 }

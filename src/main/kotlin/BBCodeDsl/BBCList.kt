@@ -13,8 +13,8 @@ fun BBCodeObject.ul(builder: BBCUnorderedList.() -> Unit) = content.add(BBCUnord
 
 @BBCodeDsl
 fun BBCOrderedList.item(builder: BBCBaseElement.() -> String) =
-    items.add(BBCBaseElement().apply { content = builder.invoke(this) })
+    items.add(BBCBaseElement().apply { content = builder(this) })
 
 @BBCodeDsl
 fun BBCUnorderedList.item(builder: BBCBaseElement.() -> String) =
-    items.add(BBCBaseElement().apply { content = builder.invoke(this) })
+    items.add(BBCBaseElement().apply { content = builder(this) })

@@ -9,7 +9,7 @@ class Row : BBCElementInterface {
         return buildString {
             append("| ")
             cells.forEach { append("$it | ") }
-            append("\n")
+            appendLine()
         }
     }
 }
