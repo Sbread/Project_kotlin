@@ -1,0 +1,3 @@
+package BBCodeAPI
+
+interface BBCElementInterface
