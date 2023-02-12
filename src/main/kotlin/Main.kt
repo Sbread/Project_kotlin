@@ -1,7 +1,33 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+import BBCodeDsl.*
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main() {
+    val bbc = bbcobject {
+        b { "text" }
+        i { "text" }
+        t { "text" }
+        s { "text" }
+        u { "text" }
+        code { "text" }
+        q { "text" }
+        link { "https://www.reddit.com" }
+        youtube { "E7d-3-uXlZM" }
+        image { "panda.png" }
+        table {
+            th { item { "Country" }; item { "Capital" } }
+            tr { item { "Russia" }; item { "Moscow" } }
+            tr { item { "Japan" }; item { "Tokio" } }
+        }
+        ol {
+            item { "first" }
+            item { "second" }
+            item { "third" }
+        }
+        ul {
+            item { "first" }
+            item { "second" }
+            item { "third" }
+        }
+    }
+    bbc.writeToFile("output.txt")
+    println(bbc)
 }
